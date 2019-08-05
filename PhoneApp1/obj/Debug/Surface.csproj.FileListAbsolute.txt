@@ -1,0 +1,28 @@
+C:\Users\Tony\Desktop\TONY14030620 ROBERT14030633\Backup\PhoneApp1\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Tony\Desktop\TONY14030620 ROBERT14030633\Backup\PhoneApp1\obj\Debug\App.g.i.cs
+C:\Users\Tony\Desktop\TONY14030620 ROBERT14030633\Backup\PhoneApp1\obj\Debug\Appreciation.g.i.cs
+C:\Users\Tony\Desktop\TONY14030620 ROBERT14030633\Backup\PhoneApp1\obj\Debug\Connect us.g.i.cs
+C:\Users\Tony\Desktop\TONY14030620 ROBERT14030633\Backup\PhoneApp1\obj\Debug\Feature.g.i.cs
+C:\Users\Tony\Desktop\TONY14030620 ROBERT14030633\Backup\PhoneApp1\obj\Debug\MainPage.g.i.cs
+C:\Users\Tony\Desktop\TONY14030620 ROBERT14030633\Backup\PhoneApp1\obj\Debug\Goaway.g.i.cs
+C:\Users\Tony\Desktop\TONY14030620 ROBERT14030633\Backup\PhoneApp1\obj\Debug\login.g.i.cs
+C:\Users\Tony\Desktop\TONY14030620 ROBERT14030633\Backup\PhoneApp1\obj\Debug\Photo3.g.i.cs
+C:\Users\Tony\Desktop\TONY14030620 ROBERT14030633\Backup\PhoneApp1\obj\Debug\Photo2.g.i.cs
+C:\Users\Tony\Desktop\TONY14030620 ROBERT14030633\Backup\PhoneApp1\obj\Debug\Photo1.g.i.cs
+C:\Users\Tony\Desktop\TONY14030620 ROBERT14030633\Backup\PhoneApp1\obj\Debug\PanoramaPage1.g.i.cs
+C:\Users\Tony\Desktop\TONY14030620 ROBERT14030633\Backup\PhoneApp1\obj\Debug\Productivity.g.i.cs
+C:\Users\Tony\Desktop\TONY14030620 ROBERT14030633\Backup\PhoneApp1\obj\Debug\Tech specs.g.i.cs
+C:\Users\Tony\Desktop\TONY14030620 ROBERT14030633\Backup\PhoneApp1\obj\Debug\Welcome.g.i.cs
+C:\Users\Tony\Desktop\TONY14030620 ROBERT14030633\Backup\PhoneApp1\obj\Debug\PhoneApp1.g.resources
+C:\Users\Tony\Desktop\TONY14030620 ROBERT14030633\Backup\PhoneApp1\Bin\Debug\ApplicationIcon.png
+C:\Users\Tony\Desktop\TONY14030620 ROBERT14030633\Backup\PhoneApp1\Bin\Debug\Background.png
+C:\Users\Tony\Desktop\TONY14030620 ROBERT14030633\Backup\PhoneApp1\Bin\Debug\Video\surfacemedia_baofeng.mp4
+C:\Users\Tony\Desktop\TONY14030620 ROBERT14030633\Backup\PhoneApp1\Bin\Debug\PhoneApp1.dll
+C:\Users\Tony\Desktop\TONY14030620 ROBERT14030633\Backup\PhoneApp1\Bin\Debug\PhoneApp1.pdb
+C:\Users\Tony\Desktop\TONY14030620 ROBERT14030633\Backup\PhoneApp1\Bin\Debug\AppManifest.xaml
+C:\Users\Tony\Desktop\TONY14030620 ROBERT14030633\Backup\PhoneApp1\Bin\Debug\PhoneApp1.xap
+C:\Users\Tony\Desktop\TONY14030620 ROBERT14030633\Backup\PhoneApp1\Bin\Debug\Microsoft.Phone.Controls.dll
+C:\Users\Tony\Desktop\TONY14030620 ROBERT14030633\Backup\PhoneApp1\Bin\Debug\Microsoft.Phone.Controls.xml
+C:\Users\Tony\Desktop\TONY14030620 ROBERT14030633\Backup\PhoneApp1\obj\Debug\PhoneApp1.dll
+C:\Users\Tony\Desktop\TONY14030620 ROBERT14030633\Backup\PhoneApp1\obj\Debug\PhoneApp1.pdb
+C:\Users\Tony\Desktop\TONY14030620 ROBERT14030633\Backup\PhoneApp1\obj\Debug\XapCacheFile.xml

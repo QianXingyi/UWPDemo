@@ -1,0 +1,26 @@
+﻿<Window x:Class="WPFJM.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="384" Width="618" Loaded="Window_Loaded">
+    <Grid Height="348" Width="604">
+        <Grid.Background>
+            <ImageBrush ImageSource="/WPFJM;component/Images/background.jpg" />
+        </Grid.Background>
+        <Label Content="Wiki For Device" Height="41" HorizontalAlignment="Left" Margin="12,12,0,0" Name="label1" VerticalAlignment="Top" Width="208" Foreground="#FFF5F2F2" FontSize="22" FontFamily="Jing Jing"></Label>
+        <Label Content="ID：" Height="28" HorizontalAlignment="Left" Margin="43,59,0,0" Name="label2" VerticalAlignment="Top" Foreground="#FFF2ECEC" Width="34"/>
+        <TextBox Height="21" HorizontalAlignment="Left" Margin="88,63,0,0" Name="idtextBox" VerticalAlignment="Top" Width="120" />
+        <Label Content="Password：" Height="27" HorizontalAlignment="Left" Margin="234,59,0,0" Name="label3" VerticalAlignment="Top" Width="91" Foreground="White" />
+        <Button Content="Login" Height="23" HorizontalAlignment="Left" Margin="486,59,0,0" Name="enterbutton" VerticalAlignment="Top" Width="89" Click="enterbutton_Click" Background="Orange" Foreground="White" />
+        <Image Height="129" HorizontalAlignment="Left" Margin="38,106,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="117" Source="/WPFJM;component/Images/1001.JPG" />
+        <Image Height="119" HorizontalAlignment="Left" Margin="177,106,0,0" Name="image2" Stretch="UniformToFill" VerticalAlignment="Top" Width="126" Source="/WPFJM;component/Images/1002.JPG" />
+        <Image Height="129" HorizontalAlignment="Left" Margin="328,106,0,0" Name="image3" Stretch="Fill" VerticalAlignment="Top" Width="122" Source="/WPFJM;component/Images/1003.jpg" />
+        <Image Height="111" HorizontalAlignment="Left" Margin="457,114,0,0" Name="image4" Stretch="Fill" VerticalAlignment="Top" Width="126" Source="/WPFJM;component/Images/1004.JPG" />
+        <Button Content="MiBand" Height="28" HorizontalAlignment="Left" Margin="38,251,0,0" Name="bandbutton" VerticalAlignment="Top" Width="117" Click="bandbutton_Click" />
+        <Button Content="MiBook" Height="26" HorizontalAlignment="Left" Margin="182,251,0,0" Name="bookbutton" VerticalAlignment="Top" Width="116" Click="bookbutton_Click" />
+        <Button Content="MiPhone" Height="29" HorizontalAlignment="Left" Margin="328,250,0,0" Name="phonebutton" VerticalAlignment="Top" Width="122" Click="phonebutton_Click" />
+        <Button Content="MiTV" Height="28" HorizontalAlignment="Left" Margin="466,250,0,0" Name="tvbutton" VerticalAlignment="Top" Width="117" Click="tvbutton_Click" />
+        <PasswordBox Height="23" HorizontalAlignment="Left" Margin="330,59,0,0" Name="passwordBox" VerticalAlignment="Top" Width="120" />
+        <Button Content="New User" Height="23" HorizontalAlignment="Left" Margin="486,85,0,0" Name="button1" VerticalAlignment="Top" Width="89" Background="White" Foreground="SlateBlue" BorderThickness="1" Click="button1_Click" />
+        <Image Height="46" HorizontalAlignment="Left" Margin="471,12,0,0" Name="image5" Stretch="UniformToFill" VerticalAlignment="Top" Width="112" Source="/WPFJM;component/Images/WFD.jpg" />
+    </Grid>
+</Window>

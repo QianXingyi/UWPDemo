@@ -1,0 +1,58 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="PhoneApp1.NewUser"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" shell:SystemTray.IsVisible="True" d:DesignHeight="768" d:DesignWidth="480" Loaded="PhoneApplicationPage_Loaded">
+
+    <!--LayoutRoot 是包含所有页面内容的根网格-->
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel 包含应用程序的名称和页标题-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="PageTitle" Text="New User" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" Foreground="Black" />
+        </StackPanel>
+        <TextBlock FontSize="26" Foreground="Black" Height="43" HorizontalAlignment="Left" Margin="12,6,0,0" Name="textBlock1" Text="Your ID" VerticalAlignment="Top" Width="89" Grid.Row="1" />
+        <TextBlock FontSize="26" Foreground="Black" Height="43" HorizontalAlignment="Left" Margin="12,69,0,0" Name="textBlock2" Text="Your Name" VerticalAlignment="Top" Width="133" Grid.Row="1" />
+        <TextBlock FontSize="26" Foreground="Black" Height="43" HorizontalAlignment="Left" Margin="12,268,0,0" Name="textBlock3" Text="Your Age" VerticalAlignment="Top" Width="110" Grid.Row="1" />
+        <TextBlock FontSize="26" Foreground="Black" Grid.Row="1" Height="43" HorizontalAlignment="Left" Margin="12,331,0,0" Name="textBlock4" Text="Your Sex" VerticalAlignment="Top" Width="110" />
+        <TextBlock FontSize="26" Foreground="Black" Grid.Row="1" Height="43" HorizontalAlignment="Left" Margin="12,393,0,0" Name="textBlock5" Text="Birthday" VerticalAlignment="Top" Width="110" />
+        <TextBlock FontSize="26" Foreground="Black" Height="43" HorizontalAlignment="Left" Margin="12,133,0,0" Name="textBlock6" Text="Password" VerticalAlignment="Top" Width="110" Grid.Row="1" />
+        <TextBlock FontSize="16" Foreground="Tomato" Height="26" HorizontalAlignment="Left" Margin="12,182,0,0" Name="textBlock7" Text="Make Sure your Password" VerticalAlignment="Top" Width="190" Grid.Row="1" />
+        <PasswordBox Grid.Row="1" Height="78" HorizontalAlignment="Left" Margin="225,120,0,0" Name="passwordBox" VerticalAlignment="Top" Width="255" Background="#FFB7B2B2" />
+        <PasswordBox Background="#FFB7B2B2" Height="79" HorizontalAlignment="Left" Margin="225,182,0,0" Name="surePassword" VerticalAlignment="Top" Width="255" Grid.Row="1" />
+        <TextBox Grid.Row="1" Height="72" HorizontalAlignment="Left" Margin="225,253,0,0" Name="agetextBox" Text="" VerticalAlignment="Top" Width="255" Background="#FFB7B2B2" FontSize="20" />
+        <TextBox Background="#FFB7B2B2" FontSize="20" Height="72" HorizontalAlignment="Left" Margin="225,378,0,0" Name="datatextBox" Text="" VerticalAlignment="Top" Width="255" Grid.Row="1" />
+        <TextBox Background="#FFB7B2B2" FontSize="20" Height="72" HorizontalAlignment="Left" Margin="225,55,0,0" Name="nametextBox" Text="" VerticalAlignment="Top" Width="255" Grid.Row="1" />
+        <RadioButton Content="Male" Grid.Row="1" Height="72" HorizontalAlignment="Left" Margin="145,314,0,0" Name="maleRadio" VerticalAlignment="Top" Background="#BF9A9696" BorderBrush="Chartreuse" Foreground="#FF0D0D0D" Checked="maleRadio_Checked" />
+        <RadioButton Background="#BF9A9696" BorderBrush="Chartreuse" Content="Female" Foreground="#FF0D0D0D" Height="72" HorizontalAlignment="Left" Margin="310,314,0,0" Name="femaleRadio" VerticalAlignment="Top" Grid.Row="1" Checked="femaleRadio_Checked" />
+        <Button Background="Black" BorderBrush="Black" ClickMode="Release" Content="Next&gt;" Foreground="White" Height="79" HorizontalAlignment="Left" Margin="330,496,0,0" Name="button1" VerticalAlignment="Top" Width="120" Grid.Row="1" Click="button1_Click" />
+        <TextBlock Grid.Row="1" Height="30" HorizontalAlignment="Left" Margin="25,210,0,0" Name="waringtextBlock" Text="" VerticalAlignment="Top" Width="124" Foreground="Tomato" />
+        <TextBlock Foreground="Black" Height="49" HorizontalAlignment="Center" Margin="243,6,12,0" Name="idBlock" Text="" VerticalAlignment="Top" Width="225" Grid.Row="1" FontSize="36" FontStyle="Italic" FontStretch="Normal" OpacityMask="{x:Null}" TextAlignment="Center" />
+        <!--ContentPanel - 在此处放置其他内容-->
+    </Grid>
+ 
+    <!--演示 ApplicationBar 用法的示例代码-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="按钮 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="按钮 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="菜单项 1"/>
+                <shell:ApplicationBarMenuItem Text="菜单项 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>

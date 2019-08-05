@@ -1,0 +1,9 @@
+F:\Lee\2016\WebServiceDB\WebServiceDB\bin\WebServiceDB.dll
+F:\Lee\2016\WebServiceDB\WebServiceDB\bin\WebServiceDB.pdb
+F:\Lee\2016\WebServiceDB\WebServiceDB\obj\Debug\WebServiceDB.dll
+F:\Lee\2016\WebServiceDB\WebServiceDB\obj\Debug\WebServiceDB.pdb
+C:\Users\Tony\Desktop\WebServiceDB\WebServiceDB\bin\WebServiceDB.dll
+C:\Users\Tony\Desktop\WebServiceDB\WebServiceDB\bin\WebServiceDB.pdb
+C:\Users\Tony\Desktop\WebServiceDB\WebServiceDB\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Tony\Desktop\WebServiceDB\WebServiceDB\obj\Debug\WebServiceDB.dll
+C:\Users\Tony\Desktop\WebServiceDB\WebServiceDB\obj\Debug\WebServiceDB.pdb

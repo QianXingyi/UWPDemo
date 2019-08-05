@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertUserDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Uname" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Uage" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usex" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Udate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertUserDetailsResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllUser">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllUserResult" type="tns:ArrayOfUser" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfUser">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="User" nillable="true" type="tns:User" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="User">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="UID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Uname" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Uage" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Usex" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Udate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="FindUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="searchstring" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FindUserResult" type="tns:ArrayOfUser" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindUID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="searchstring" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindUIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FindUIDResult" type="tns:User" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertDeviceDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Dname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Dintroduction" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Dappearance" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertDeviceDetailsResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="FindDevice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="searchstring" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindDeviceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FindDeviceResult" type="tns:ArrayOfDevice" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDevice">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Device" nillable="true" type="tns:Device" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Device">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="DID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dintroduction" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Dappearance" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAllDevice">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllDeviceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllDeviceResult" type="tns:ArrayOfDevice" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindChatByUID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="searchstring" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindChatByUIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FindChatByUIDResult" type="tns:ArrayOfChat" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfChat">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Chat" nillable="true" type="tns:Chat" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Chat">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ChatID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comment" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="FindChatByDID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="searchstring" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindChatByDIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FindChatByDIDResult" type="tns:ArrayOfChat" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertChatDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ChatID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="DID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="UID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Comment" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertChatDetailsResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllChat">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllChatResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllChatResult" type="tns:ArrayOfChat" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertUserDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertUserDetails" />
+  </wsdl:message>
+  <wsdl:message name="InsertUserDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertUserDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllUserSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllUser" />
+  </wsdl:message>
+  <wsdl:message name="GetAllUserSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="FindUserSoapIn">
+    <wsdl:part name="parameters" element="tns:FindUser" />
+  </wsdl:message>
+  <wsdl:message name="FindUserSoapOut">
+    <wsdl:part name="parameters" element="tns:FindUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="FindUIDSoapIn">
+    <wsdl:part name="parameters" element="tns:FindUID" />
+  </wsdl:message>
+  <wsdl:message name="FindUIDSoapOut">
+    <wsdl:part name="parameters" element="tns:FindUIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertDeviceDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertDeviceDetails" />
+  </wsdl:message>
+  <wsdl:message name="InsertDeviceDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertDeviceDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="FindDeviceSoapIn">
+    <wsdl:part name="parameters" element="tns:FindDevice" />
+  </wsdl:message>
+  <wsdl:message name="FindDeviceSoapOut">
+    <wsdl:part name="parameters" element="tns:FindDeviceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllDeviceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllDevice" />
+  </wsdl:message>
+  <wsdl:message name="GetAllDeviceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllDeviceResponse" />
+  </wsdl:message>
+  <wsdl:message name="FindChatByUIDSoapIn">
+    <wsdl:part name="parameters" element="tns:FindChatByUID" />
+  </wsdl:message>
+  <wsdl:message name="FindChatByUIDSoapOut">
+    <wsdl:part name="parameters" element="tns:FindChatByUIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="FindChatByDIDSoapIn">
+    <wsdl:part name="parameters" element="tns:FindChatByDID" />
+  </wsdl:message>
+  <wsdl:message name="FindChatByDIDSoapOut">
+    <wsdl:part name="parameters" element="tns:FindChatByDIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertChatDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertChatDetails" />
+  </wsdl:message>
+  <wsdl:message name="InsertChatDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertChatDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllChatSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllChat" />
+  </wsdl:message>
+  <wsdl:message name="GetAllChatSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllChatResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertUserDetails">
+      <wsdl:input message="tns:InsertUserDetailsSoapIn" />
+      <wsdl:output message="tns:InsertUserDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUser">
+      <wsdl:input message="tns:GetAllUserSoapIn" />
+      <wsdl:output message="tns:GetAllUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindUser">
+      <wsdl:input message="tns:FindUserSoapIn" />
+      <wsdl:output message="tns:FindUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindUID">
+      <wsdl:input message="tns:FindUIDSoapIn" />
+      <wsdl:output message="tns:FindUIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDeviceDetails">
+      <wsdl:input message="tns:InsertDeviceDetailsSoapIn" />
+      <wsdl:output message="tns:InsertDeviceDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindDevice">
+      <wsdl:input message="tns:FindDeviceSoapIn" />
+      <wsdl:output message="tns:FindDeviceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDevice">
+      <wsdl:input message="tns:GetAllDeviceSoapIn" />
+      <wsdl:output message="tns:GetAllDeviceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindChatByUID">
+      <wsdl:input message="tns:FindChatByUIDSoapIn" />
+      <wsdl:output message="tns:FindChatByUIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindChatByDID">
+      <wsdl:input message="tns:FindChatByDIDSoapIn" />
+      <wsdl:output message="tns:FindChatByDIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertChatDetails">
+      <wsdl:input message="tns:InsertChatDetailsSoapIn" />
+      <wsdl:output message="tns:InsertChatDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllChat">
+      <wsdl:input message="tns:GetAllChatSoapIn" />
+      <wsdl:output message="tns:GetAllChatSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUserDetails">
+      <soap:operation soapAction="http://tempuri.org/InsertUserDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUser">
+      <soap:operation soapAction="http://tempuri.org/GetAllUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindUser">
+      <soap:operation soapAction="http://tempuri.org/FindUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindUID">
+      <soap:operation soapAction="http://tempuri.org/FindUID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDeviceDetails">
+      <soap:operation soapAction="http://tempuri.org/InsertDeviceDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindDevice">
+      <soap:operation soapAction="http://tempuri.org/FindDevice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDevice">
+      <soap:operation soapAction="http://tempuri.org/GetAllDevice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindChatByUID">
+      <soap:operation soapAction="http://tempuri.org/FindChatByUID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindChatByDID">
+      <soap:operation soapAction="http://tempuri.org/FindChatByDID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertChatDetails">
+      <soap:operation soapAction="http://tempuri.org/InsertChatDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllChat">
+      <soap:operation soapAction="http://tempuri.org/GetAllChat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1Soap12" type="tns:Service1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUserDetails">
+      <soap12:operation soapAction="http://tempuri.org/InsertUserDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUser">
+      <soap12:operation soapAction="http://tempuri.org/GetAllUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindUser">
+      <soap12:operation soapAction="http://tempuri.org/FindUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindUID">
+      <soap12:operation soapAction="http://tempuri.org/FindUID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDeviceDetails">
+      <soap12:operation soapAction="http://tempuri.org/InsertDeviceDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindDevice">
+      <soap12:operation soapAction="http://tempuri.org/FindDevice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDevice">
+      <soap12:operation soapAction="http://tempuri.org/GetAllDevice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindChatByUID">
+      <soap12:operation soapAction="http://tempuri.org/FindChatByUID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindChatByDID">
+      <soap12:operation soapAction="http://tempuri.org/FindChatByDID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertChatDetails">
+      <soap12:operation soapAction="http://tempuri.org/InsertChatDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllChat">
+      <soap12:operation soapAction="http://tempuri.org/GetAllChat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="http://localhost:1800/Service1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1Soap12" binding="tns:Service1Soap12">
+      <soap12:address location="http://localhost:1800/Service1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
